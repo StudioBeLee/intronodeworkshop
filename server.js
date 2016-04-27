@@ -24,7 +24,21 @@ app.use(express.static('public'));
 
 
 app.get('/',function(request, response){
-	response.render('home');
+	var favoriteSong = ['HomeSweet', ' RedRose', ' CatCradle'];
+	var favoriteLinks =[
+	{text: 'Instagram', url: 'http://instagram.com'},
+	{text: 'Facebook', url: 'http://facebook.com'},
+	{text: 'Gmail', url: 'http://gmail.com'},
+	];
+
+	response.render('home', {
+		title:"home page",
+		favorites: favoriteSong,
+		links: favoriteLinks
+	});
+
+
+
 });
 
 app.get('/projects', function(request, response){

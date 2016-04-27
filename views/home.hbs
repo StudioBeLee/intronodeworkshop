@@ -1,2 +1,16 @@
 <h1>Hello World! </h1>
 <p> I'm home! </p>
+
+<h2>Favorite Songs</h2>
+<ul>
+{{#each favorites as |favorite|}}
+<li>{{favorite}}</li>
+{{/each}}
+</ul>
+
+<h2>Favorites Links</h2>
+<ul>
+{{#each links as |link|}}
+<li><a href="{{link.url}}">{{link.text}}</li>
+{{/each}}
+</ul>
